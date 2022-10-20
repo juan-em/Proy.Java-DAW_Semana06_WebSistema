@@ -38,6 +38,15 @@ if(misession == null || misession.getAttribute("usuario") == null){
                 <a href="/WebSistema/controladorPrincipal?accion=listadoCursos" class="list-group-item list-group-item-action list-group-item-secondary" 
                    target="derecha">Registro Cursos</a>
             </div>
+            <div class="alert alert-primary" role="alert">
+                <h4>Operaciones</h4>
+                <a href="/WebSistema/controladorPrincipal?accion=matriculaMostrarAlumnos&modo=Lista" class="list-group-item" target="derecha">
+                    Crear Matricula
+                </a>
+                <a href="/WebSistema/controladorPrincipal?accion=listadoMatriculas" class="list-group-item" target="derecha">
+                    Lista de Matriculas
+                </a>
+            </div>
         </div>
     </center>
 </body>
