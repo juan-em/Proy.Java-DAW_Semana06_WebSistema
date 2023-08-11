@@ -197,4 +197,30 @@ public class MatriculaDAOImpl implements IMatriculaDAO {
         return listaMatriculas;
     }
 
+    @Override
+    public List<String> getCodeMat() {
+        Connection co = null;
+        Statement stm = null;
+        ResultSet rs = null;
+        String sql = "SELECT DISTINCT nro_doc FROM test.matriculas;";
+        List<String> listaCodMat = new ArrayList<String>();
+
+        try {
+            Conexion con = new Conexion();
+            co = con.Conectar();
+            stm = co.createStatement();
+            rs = stm.executeQuery(sql);
+            while (rs.next()) {
+                String cod = rs.getString(1);
+                listaCodMat.add(cod);
+            }
+            stm.close();
+            rs.close();
+            co.close();
+        } catch (SQLException e) {
+            System.out.println("Error:Clase MatriculaDaoImpl,"
+                    + "método getCodMat");
+        }
+        return listaCodMat;
+    }
 }

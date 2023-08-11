@@ -47,6 +47,21 @@ if(misession == null || misession.getAttribute("usuario") == null){
                     Lista de Matriculas
                 </a>
             </div>
+            <div class="alert alert-success" role="alert">
+                <h4>Reportes</h4>
+                <a href="/WebSistema/reportes/listadoAlumnos.jsp" class="list-group-item" target="derecha">
+                    Listar Alumnos
+                </a>
+                <a href="/WebSistema/reportes/formularioListarAlumnosPorSexo.jsp" class="list-group-item" target="derecha">
+                    Listar Alumnos por sexo
+                </a>
+                <a href="/WebSistema/reportes/listadoCursos.jsp" class="list-group-item" target="derecha">
+                    Listar Cursos
+                </a>
+                <a href="/WebSistema/reportes/formularioListarMatriculasPorNdoc.jsp" class="list-group-item" target="derecha">
+                    Matriculas por N° Cod
+                </a>
+            </div>
         </div>
     </center>
 </body>
